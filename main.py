@@ -48,8 +48,7 @@ def anagram(input1, input2):
 
 
    
-
 if __name__ == '__main__':
     input1 = input()
     input2 = input()
-    print(anagram(input1, input2))
+    anagram(input1, input2)
