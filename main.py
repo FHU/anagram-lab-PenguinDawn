@@ -1,57 +1,50 @@
 
-
 def anagram(input1, input2):
-
-    #list
+    #variables
     list1 = []
     list2 = []
-    end = True
+    endValue = True
 
+    #lower the strings
+    string1 = input1.lower()
+    string2 = input2.lower()
+        
+    #create lists
+    for x in string1:
+        if x != " ":
+            list1.append(x)
 
-    
+    for y in string2:
+        if y != " ":
+            list2.append(y)
+    #sort lists
+    list1.sort()
+    list2.sort()
+
+    #catch empty strings
     if input1 == " ":
-        end = False
-        return False
+        endValue = False
     
-    elif input2 == " ":
-        end = False
-        return False
-    
-    else:
+    if input2 == " ":
+        endValue = False
 
-        for x in input1:
+    #catch uneven lists
+    if len(list1) != len(list2):
+        endValue = False
 
-            if x == " ":
-                continue
-            else:
-                list1.append(x)
+    #check anagrams
+    while endValue != False:
 
-        for y in input2:
+        #They are sorted lists now
+        for i in range(0, len(list1) - 1):
 
-            if y == " ":
-                continue
-            else:
-                list2.append(y)
-        
-        list1.sort()
-        list2.sort()
+            #see if the values are the same
+            if list1[i] != list2[i]:
+                endValue = False
 
-        if len(list1) != len(list2):
-            end = False
-            return False
+    #return the value stored in endValue
+    return endValue
 
-        for z in range(0, len(list1)):
-
-            if list1[z] != list2[z]:
-                end = False
-                return False
-            else:
-                end == True
-        
-        if end == True:
-            return end
-            
-                
 
 
    
@@ -59,8 +52,4 @@ def anagram(input1, input2):
 if __name__ == '__main__':
     input1 = input()
     input2 = input()
-    #lowers
-    string1 = input1.lower()
-    string2 = input2.lower()
-    print(anagram(string1, string2))
-    
+    print(anagram(input1, input2))
