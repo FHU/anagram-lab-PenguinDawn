@@ -1,6 +1,8 @@
 
 
 def anagram(input1, input2):
+
+    #list
     list1 = []
     list2 = []
     end = True
@@ -52,7 +54,7 @@ def anagram(input1, input2):
                 
 
 
-    
+   
 
 if __name__ == '__main__':
     input1 = input()
