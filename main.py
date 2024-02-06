@@ -22,14 +22,14 @@ def anagram(input1, input2):
         for x in input1:
 
             if x == " ":
-                pass
+                continue
             else:
                 list1.append(x)
 
         for y in input2:
 
             if y == " ":
-                pass
+                continue
             else:
                 list2.append(y)
         
