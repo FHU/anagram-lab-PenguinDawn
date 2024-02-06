@@ -59,6 +59,7 @@ def anagram(input1, input2):
 if __name__ == '__main__':
     input1 = input()
     input2 = input()
+    #lowers
     string1 = input1.lower()
     string2 = input2.lower()
     print(anagram(string1, string2))
