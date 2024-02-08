@@ -51,4 +51,4 @@ def anagram(input1, input2):
 if __name__ == '__main__':
     input1 = input()
     input2 = input()
-    anagram(input1, input2)
+    print(anagram(input1, input2))
