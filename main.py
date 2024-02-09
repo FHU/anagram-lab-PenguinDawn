@@ -47,7 +47,7 @@ def anagram(input1, input2):
 
 
 
-   
+   #Do anagram
 if __name__ == '__main__':
     input1 = input()
     input2 = input()
